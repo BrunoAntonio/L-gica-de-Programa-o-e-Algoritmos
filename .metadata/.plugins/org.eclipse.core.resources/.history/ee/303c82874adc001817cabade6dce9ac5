@@ -1,0 +1,78 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+		
+		int[][] mat = new int[n][n];
+
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat[i].length; j++) {
+				mat[i][j] = sc.nextInt();
+			}
+		}
+		
+		int linha = sc.nextInt();
+		int coluna = sc.nextInt();
+
+		
+		int sum = 0;
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat[i].length; j++) {
+				if (mat[i][j] > 0) {
+					sum += mat[i][j];
+				}
+			}
+		}
+		System.out.printf("SOMA DOS POSITIVOS: %.1f%n", sum);
+		
+		
+		System.out.print("LINHA ESCOLHIDA: ");
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat[i].length; j++) {
+				System.out.printf("%.1f",mat[linha][j]);
+			}
+		}
+		
+		System.out.print("COLUNA ESCOLHIDA: ");
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat[i].length; j++) {
+				System.out.printf("%.1f",mat[i][coluna]);
+			}
+		}
+		
+		System.out.print("DIAGONAL PRINCIPAL: ");
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat[i].length; j++) {
+				if(mat[i][j]==mat[i][i]) {
+					System.out.printf("%.1f",mat[i][j]);
+				}
+			}
+		}
+		
+		System.out.print("MATRIZ ALTERADA: ");
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat[i].length; j++) {
+				if(mat[i][j]<0) {
+					mat[i][j] *=mat[i][j];
+					System.out.printf(" %.1f",mat[i][j]);
+				}
+				System.out.println("");
+			}
+		}
+		
+		
+
+		sc.close();
+
+	}
+
+}

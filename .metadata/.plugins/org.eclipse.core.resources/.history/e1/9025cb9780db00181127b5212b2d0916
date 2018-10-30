@@ -1,0 +1,30 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+
+		for (int i = 1; i < n; i++) {
+			int a = sc.nextDouble();
+			int b = sc.nextDouble();
+
+			if (a/b != 0) {
+				double div=a/b;
+				System.out.printf("%.1f%n"+div);
+			}
+			
+		}
+
+		sc.close();
+
+	}
+
+}

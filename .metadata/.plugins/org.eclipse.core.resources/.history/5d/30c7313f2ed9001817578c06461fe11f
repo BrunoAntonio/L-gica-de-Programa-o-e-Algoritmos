@@ -1,0 +1,42 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class program {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		
+		
+		// || enquanto x dif 0 ou y dif 0 executar:
+		// && enquanto x dif 0 e y dif 0 executar:
+		while(x !=0 && y !=0) {
+			
+			if (x>0 && y>0) {
+				System.out.println("primeiro");
+			}
+			if (x<0 && y>0) {
+				System.out.println("segundo");
+			}
+			if (x<0 && y<0) {
+				System.out.println("terceiro");
+			}
+			if (x>0 && y<0) {
+				System.out.println("quarto");
+			}
+			x=sc.nextInt();
+			y=sc.nextInt();
+		} 
+		
+		System.out.println("");
+		
+		sc.close();
+	}
+
+}

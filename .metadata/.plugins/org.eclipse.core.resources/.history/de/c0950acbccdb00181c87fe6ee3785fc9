@@ -1,0 +1,18 @@
+package application;
+
+public class t {
+
+	public static void main(String[] args) {
+		
+		String a="maria";
+		String b="joana";
+		
+		if(a==b) {
+			System.out.println("true");
+		}else {
+			System.out.println("false");
+		}
+
+	}
+
+}

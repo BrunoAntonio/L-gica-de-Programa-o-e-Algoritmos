@@ -1,0 +1,33 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		float PI = 3.14159f;
+		float a=sc.nextFloat();
+		float b=sc.nextFloat();
+		float c=sc.nextFloat();
+		
+		float triangle=a*b;
+		float circle=PI*c*c;
+		float trapezium=(a+b)*c/2;
+		float square=b*b;
+		float rectangle=a*b;
+
+		System.out.printf("TRIANGLE: %.3f%n",triangle);
+		System.out.printf("CIRCLE: %.3f%n",circle);
+		System.out.printf("TRAPEZIUM: %.3f%n",trapezium);
+		System.out.printf("SQUARE: %.3f%n",square);
+		System.out.printf("RECTANGLE: %.3f%n",rectangle);
+		
+		sc.close();
+	}
+
+}

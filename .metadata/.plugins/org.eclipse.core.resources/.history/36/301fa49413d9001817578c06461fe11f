@@ -1,0 +1,26 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		int numb=sc.nextInt();
+		int hours=sc.nextInt();
+		double valueHour=sc.nextDouble();
+		
+		
+		double salary=hours*valueHour;
+
+		System.out.println("Number = "+numb);
+		System.out.printf("SALARY = U$ %.2f%n",salary);
+
+		sc.close();
+	}
+
+}

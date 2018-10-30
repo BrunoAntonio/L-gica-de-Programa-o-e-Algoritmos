@@ -1,0 +1,20 @@
+package application;
+
+public class t {
+
+	public static void main(String[] args) {
+		
+		int [] names= new int [2];
+		names =(1,2);
+		String a="maria";
+		String b="maria";
+		
+		if(a==b) {
+			System.out.println("true");
+		}else {
+			System.out.println("false");
+		}
+
+	}
+
+}

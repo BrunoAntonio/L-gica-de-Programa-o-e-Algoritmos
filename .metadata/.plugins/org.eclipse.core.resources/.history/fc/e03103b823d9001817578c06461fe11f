@@ -1,0 +1,43 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double numb = sc.nextDouble();
+		int qty = sc.nextInt();
+
+		double price;
+		if (numb>=0 && numb<25) {
+			System.out.println("INTERVALO [0,25]");
+		} 
+		else if (numb>=25 && numb<50) {
+			price=4.50;
+		}
+		else if (numb>=50 && numb<75) {
+			price=5.00;
+		}
+		else if (numb>=75 && numb<=100) {
+			price=2.00;
+		}
+		else if (item==5) {
+			price=1.50;
+		}
+		else {
+			price=0;
+		}
+		
+		double total=price*qty;
+			
+		System.out.printf("Total: R$ %.2f%n",total);
+
+		sc.close();
+	}
+
+}
